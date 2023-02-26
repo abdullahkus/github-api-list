@@ -1,23 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import * as userService from '@/services/user.service';
 import UsersContainer from '@/containers/users/users.container';
 
-const PageNumber = ({ currentPage, users }) => {
+const PageNumber = ({ users }) => {
     return <UsersContainer users={users} />;
 };
 
 export async function getStaticPaths() {
-    // get users to calculate total pages
+    // Calculating how many pages there are with 10 users on each page
     const users = await userService
         .getUsers()
         .then((response) => response.data)
         .catch((err) => console.log(err));
-    const userCount = users.length;
+    const totalUser = users.length;
     const pageSize = 10;
-    const pageCount = Math.ceil(userCount / pageSize);
+    const totalPages = Math.ceil(totalUser / pageSize);
 
-    // create paths for each page, except for page 1
-    const paths = Array.from({ length: pageCount }, (_, i) => i + 1)
+    const paths = Array.from({ length: totalPages }, (_, i) => i + 1)
+        // create paths for each page, except for page 1
         .filter((pageNumber) => pageNumber !== 1)
         .map((pageNumber) => ({
             params: { pageNumber: `${pageNumber}` },
@@ -33,6 +33,8 @@ export async function getStaticProps({ params }) {
     const { pageNumber } = params;
     let since;
 
+    // Github API also finds which page it is on because it is since instead of the page number option.
+    // Since "/users/page/" pages start from 2, we subtract 1 from pageNumber.
     pageNumber === 1 ? (since = undefined) : (since = (pageNumber - 1) * 10);
 
     const users = await userService
