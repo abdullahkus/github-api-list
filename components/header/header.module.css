@@ -1,0 +1,11 @@
+.header {
+    @apply bg-gray-100 p-4 mb-4 shadow-lg;
+}
+
+.header__wrapper {
+    @apply container mx-auto flex justify-center items-center;
+}
+
+.header__logo {
+    @apply text-2xl font-bold text-primary;
+}

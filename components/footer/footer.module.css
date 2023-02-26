@@ -1,0 +1,11 @@
+.footer {
+    @apply bg-primary p-4 mt-4 shadow-lg;
+}
+
+.footer__wrapper {
+    @apply container mx-auto flex justify-center items-center;
+}
+
+.footer__text {
+    @apply bottom-0 text-xs text-gray-100;
+}

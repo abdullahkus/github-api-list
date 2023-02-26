@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./*"],
+            "@components/*": ["./components/*"],
+            "@containers/*": ["./containers/*"],
+            "@services/*": ["./services/*"],
+            "@utils/*": ["./utils/*"],
+            "@axios": ["./utils/axios.js"],
+            "@styles/*": ["./styles/*"]
+        }
+    }
+}
