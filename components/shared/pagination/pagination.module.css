@@ -1,0 +1,27 @@
+.pagination {
+    @apply flex justify-center mt-8 mb-4;
+}
+
+.pagination__wrapper {
+    @apply flex space-x-4;
+}
+
+.pagination__item {
+    @apply rounded-md px-3 py-2;
+}
+
+.pagination__item--disabled {
+    @apply opacity-50 cursor-not-allowed;
+}
+
+.pagination__item--void {
+    @apply bg-gray-100;
+}
+
+.pagination__item--active {
+    @apply bg-primary text-white;
+}
+
+.pagination__item--deactivate {
+    @apply bg-gray-100 hover:bg-gray-200;
+}

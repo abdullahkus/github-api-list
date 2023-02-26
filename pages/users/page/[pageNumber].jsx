@@ -1,9 +1,26 @@
-import React from 'react';
-import * as userService from '@/services/user.service';
+import React, { useState, useEffect } from 'react';
 import UsersContainer from '@/containers/users/users.container';
+import * as userService from '@/services/user.service';
+import getUserTotalPages from '@utils/getUserTotalPages.util';
 
-const PageNumber = ({ users }) => {
-    return <UsersContainer users={users} />;
+const PageNumber = ({ users, currentPage }) => {
+    const [totalPages, setTotalPages] = useState();
+
+    useEffect(() => {
+        const getTotalPages = async () => {
+            const totalPages = await getUserTotalPages();
+
+            setTotalPages(totalPages);
+        };
+        getTotalPages();
+    }, [totalPages]);
+    return (
+        <UsersContainer
+            users={users}
+            currentPage={currentPage}
+            totalPages={totalPages}
+        />
+    );
 };
 
 export async function getStaticPaths() {
