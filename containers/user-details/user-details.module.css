@@ -1,0 +1,39 @@
+.userDetails {
+    @apply flex gap-16 w-full items-center;
+}
+
+.userDetails__avatar {
+    @apply rounded-full;
+}
+
+.userDetails__summary {
+    @apply flex flex-col gap-4 w-full;
+}
+
+.summary__head {
+    @apply flex flex-col;
+}
+
+.summary__name {
+    @apply text-3xl font-extrabold;
+}
+
+.summary__bio {
+    @apply mt-2;
+}
+
+.summary__details {
+    @apply grid grid-cols-2;
+}
+
+.summary__group {
+    @apply flex flex-col;
+}
+
+.group__title {
+    @apply font-light text-xs;
+}
+
+.group__value {
+    @apply font-semibold text-lg;
+}

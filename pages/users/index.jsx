@@ -1,9 +1,9 @@
 import React from 'react';
-import Users from '@/containers/users.container';
+import UsersContainer from '@/containers/users/users.container';
 import * as userService from '@/services/user.service';
 
 const Users = ({ users }) => {
-    return <Users users={users} />;
+    return <UsersContainer users={users} />;
 };
 
 export const getStaticProps = async () => {

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import * as userService from '@/services/user.service';
-import Users from '@/containers/users.container';
+import UsersContainer from '@/containers/users/users.container';
 
 const PageNumber = ({ currentPage, users }) => {
-    return <Users users={users} />;
+    return <UsersContainer users={users} />;
 };
 
 export async function getStaticPaths() {
