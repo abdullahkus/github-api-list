@@ -7,7 +7,7 @@
             "@containers/*": ["./containers/*"],
             "@services/*": ["./services/*"],
             "@utils/*": ["./utils/*"],
-            "@axios": ["./utils/axios.js"],
+            "@axios": ["./utils/axios.util.js"],
             "@styles/*": ["./styles/*"]
         }
     }
