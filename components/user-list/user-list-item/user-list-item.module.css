@@ -1,0 +1,15 @@
+.item {
+    @apply flex gap-2 items-center justify-between px-4 bg-gray-50 hover:bg-gray-200 p-2 rounded-sm shadow-sm;
+}
+
+.item__avatar {
+    @apply text-text rounded-full;
+}
+
+.item__username {
+    @apply text-sm text-text;
+}
+
+.item__url {
+    @apply text-text;
+}
