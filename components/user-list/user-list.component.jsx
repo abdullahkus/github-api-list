@@ -5,7 +5,7 @@ import UserListItem from './user-list-item/user-list-item.component';
 const UserList = ({ users }) => {
     return (
         <div className="flex flex-col gap-2">
-            <h3 className="text-2xl text-primary">User List</h3>
+            <h3 className="text-2xl text-primary mb-2">User List</h3>
             <div className={styles.list}>
                 {users.map((user) => (
                     <UserListItem user={user} key={user.id} />
