@@ -1,38 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Summary
 
-## Getting Started
+This project is a web application built using Next.js that uses the GitHub API as a data source. The application starts with server-side rendering (SSR) for the initial page load and allows users to view a paginated list of GitHub users. Each page can display a maximum of 10 users and users can navigate between pages and search for a specific GitHub user. The basic information for each user, including their username, profile picture, and a link to their GitHub profile, is listed. When a user clicks on the avatar or username of a user in the list, a detail page opens with additional information about that user, such as their bio, location, and number of followers.
 
-First, run the development server:
+# Live
+
+[Live Version](https://github-api-list.vercel.app/
+)
+
+# Project Structure
+
+## /pages
+
+It is the folder where the pages of a Next.js project are stored.
+
+## /components
+
+It is a folder that contains all the other components of the project outside the pages folder. This folder contains small, reusable components that can be used in your pages.
+
+## /components/share
+
+This folder contains shared components used in the project. These are components that are used in multiple pages and are written once in the project instead of being repeated.
+
+## /containers
+
+It is a folder that covers larger sections of the pages.
+
+## /layouts
+
+This folder contains components that define the layout and common views of the pages in your project.
+
+## /services
+
+This folder contains functions written to interact with external services such as API calls.
+
+## /utils
+
+This folder contains helper functions and tools that can be used in your project. For example, a date formatting function or a validation function can be found here.
+
+## /styles
+
+This folder contains style pages of the project. It is where CSS files are located and global style pages can be found here.
+
+# Technology
+
+-   React
+-   Next
+-   TailwindCSS
+-   Axios
+-   Eslint
+
+# Development Server
 
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
