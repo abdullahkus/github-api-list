@@ -1,9 +1,9 @@
 .pagination {
-    @apply flex justify-center mt-8 mb-4;
+    @apply flex justify-center mt-8 mb-4 w-full h-full;
 }
 
 .pagination__wrapper {
-    @apply flex space-x-4;
+    @apply flex flex-wrap justify-center gap-y-8 space-x-4;
 }
 
 .pagination__item {

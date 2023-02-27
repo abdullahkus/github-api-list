@@ -8,9 +8,7 @@ const UserListContainer = ({ users, currentPage, totalPages }) => {
         <div className="flex flex-col gap-2">
             <UserSearch />
             <UserList users={users} />
-            <div className="mx-auto">
-                <Pagination currentPage={currentPage} totalPages={totalPages} />
-            </div>
+            <Pagination currentPage={currentPage} totalPages={totalPages} />
         </div>
     );
 };
