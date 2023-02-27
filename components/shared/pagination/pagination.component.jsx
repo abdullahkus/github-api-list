@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import * as styles from './Pagination.module.css';
+import * as styles from './pagination.module.css';
 
 function Pagination({ currentPage, totalPages }) {
     const pages = [];
