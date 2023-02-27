@@ -14,10 +14,10 @@ const UserListItem = ({ user }) => {
                     width={60}
                     height={60}
                 />
-                <div className={styles.item__nameGroup}>
+                <div className="flex w-full ml-4 flex-col md:flex-row md:justify-between gap-2 ">
                     <span className={styles.item__username}>{user.login}</span>
+                    <span className={styles.item__url}>{user.html_url}</span>
                 </div>
-                <span className={styles.item__url}>{user.html_url}</span>
             </div>
         </Link>
     );

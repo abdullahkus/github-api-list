@@ -3,11 +3,11 @@
 }
 
 .item__avatar {
-    @apply text-text rounded-full;
+    @apply text-text rounded-full w-auto;
 }
 
 .item__username {
-    @apply text-sm text-text;
+    @apply text-sm text-text truncate;
 }
 
 .item__url {
