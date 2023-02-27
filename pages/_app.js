@@ -1,7 +1,7 @@
 import '@/styles/globals.css';
 import '@/styles/reset.css';
 import MainLayout from '@/layouts/main/main.layout';
-import { Inter } from '@next/font/google';
+import { Inter } from 'next/font/google';
 
 const interFontFamily = Inter({ subsets: ['latin'] });
 
